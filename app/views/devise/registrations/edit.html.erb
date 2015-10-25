@@ -37,6 +37,11 @@
     <%= f.text_field :neighborhood, autofocus: true %>
   </div>
 
+  <div class="field">
+    <%= f.label :avatar %><br />
+    <%= f.file_field :avatar %>
+  </div>
+
   <div class="actions">
     <%= f.submit "Update" %>
   </div>
