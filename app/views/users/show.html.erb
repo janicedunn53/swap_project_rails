@@ -1,1 +1,13 @@
-yo
+<h1><%= @user.username %>'s Items</h1>
+
+<% if @user.listings.any? %>
+  <ul>
+    <% @user.listings.each do |listing| %>
+      <li><%= link_to listing.name, user_listing_path(@user, listing) %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>Currently, there are no items available to swap.</p>
+<% end %>
+
+<p><%= link_to "Add an item to swap or share", new_user_listing_path(@user) %></p>

@@ -4,32 +4,35 @@ class ListingsController < ApplicationController
   end
 
   def show
+    @user = User.find(params[:user_id])
     @listing = Listing.find(params[:id])
   end
 
   def new
     @user = User.find(params[:user_id])
-    @listing = @user.listing.new
+    @listing = @user.listings.new
   end
 
   def create
     @user = User.find(params[:user_id])
-    @listing = @user.listing.new(listing_params)
+    @listing = @user.listings.new(listing_params)
     if @listing.save
-      redirect_to listings_path
+      redirect_to user_path(@listing.user)
     else
       render :new
     end
   end
 
   def edit
-    @listing = Listing.find(params[:id])
+    @user = User.find(params[:user_id])
+    @listing = @user.listings.find(params[:id])
   end
 
   def update
-    @listing = Listing.find(params[:id])
+    @user = User.find(params[:user_id])
+    @listing = @user.listings.find(params[:id])
     if @listing.update(listing_params)
-      redirect_to listings_path
+      redirect_to user_path(@user)
     else
       render :edit
     end
@@ -38,7 +41,7 @@ class ListingsController < ApplicationController
   def destroy
     @listing = Listing.find(params[:id])
     @listing.destroy
-    redirect_to listings_path
+      redirect_to user_path(params[:user_id])
   end
 
   private
