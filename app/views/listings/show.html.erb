@@ -1,5 +1,6 @@
 <h1><%= @listing.name %></h1>
 <p><%= @listing.description %></p>
+<%= image_tag @listing.photo %>
 
 <p><%= link_to "Edit Listing", edit_user_listing_path(@user, @listing) %></p>
 <p><%= link_to "Delete Listing", user_listing_path(@user, @listing), :data => {:confirm => "Are you sure you want to delete this listing?", :method => "delete"} %></p>
