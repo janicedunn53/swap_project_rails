@@ -17,6 +17,7 @@ class ListingsController < ApplicationController
     @user = User.find(params[:user_id])
     @listing = @user.listings.new(listing_params)
     if @listing.save
+      flash[:notice] = "Item successfully saved!"
       redirect_to user_path(@listing.user)
     else
       render :new
@@ -46,6 +47,6 @@ class ListingsController < ApplicationController
 
   private
   def listing_params
-    params.require(:listing).permit(:name, :description)
+    params.require(:listing).permit(:name, :description, :photo)
   end
 end
