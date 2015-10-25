@@ -1,6 +1,6 @@
 <%= render 'layouts/errors', :object => @listing %>
 
-<%= form_for @listing do |f| %>
+<%= form_for [@user, @listing] do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
   <%= f.label :description %>
