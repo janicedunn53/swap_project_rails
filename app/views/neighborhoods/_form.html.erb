@@ -1,0 +1,15 @@
+<%= render 'layouts/errors', :object => @neighborhood %>
+
+<%= form_for @neighborhood do |f| %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :quadrant %>
+    <%= f.text_field :quadrant %>
+  </div>
+  <br>
+  <%= f.submit %>
+<% end %>
