@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/janicedunn/Desktop/swap_project/spec/features/user/sign_up_user_pages_spec.rb": [
+      "/Users/Guest/Desktop/swap_project_rails/spec/features/user/sign_up_user_pages_spec.rb": [
         1,
         null,
         1,
@@ -26,7 +26,7 @@
         null,
         null
       ],
-      "/Users/janicedunn/Desktop/swap_project/spec/rails_helper.rb": [
+      "/Users/Guest/Desktop/swap_project_rails/spec/rails_helper.rb": [
         1,
         1,
         null,
@@ -50,14 +50,14 @@
         null,
         null
       ],
-      "/Users/janicedunn/Desktop/swap_project/config/environment.rb": [
+      "/Users/Guest/Desktop/swap_project_rails/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/janicedunn/Desktop/swap_project/config/application.rb": [
+      "/Users/Guest/Desktop/swap_project_rails/config/application.rb": [
         1,
         null,
         1,
@@ -94,12 +94,12 @@
         null,
         null
       ],
-      "/Users/janicedunn/Desktop/swap_project/config/boot.rb": [
+      "/Users/Guest/Desktop/swap_project_rails/config/boot.rb": [
         1,
         null,
         1
       ],
-      "/Users/janicedunn/Desktop/swap_project/config/environments/test.rb": [
+      "/Users/Guest/Desktop/swap_project_rails/config/environments/test.rb": [
         1,
         null,
         null,
@@ -143,7 +143,7 @@
         null,
         null
       ],
-      "/Users/janicedunn/Desktop/swap_project/config/initializers/assets.rb": [
+      "/Users/Guest/Desktop/swap_project_rails/config/initializers/assets.rb": [
         null,
         null,
         null,
@@ -156,7 +156,7 @@
         null,
         null
       ],
-      "/Users/janicedunn/Desktop/swap_project/config/initializers/backtrace_silencers.rb": [
+      "/Users/Guest/Desktop/swap_project_rails/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -165,12 +165,12 @@
         null,
         null
       ],
-      "/Users/janicedunn/Desktop/swap_project/config/initializers/cookies_serializer.rb": [
+      "/Users/Guest/Desktop/swap_project_rails/config/initializers/cookies_serializer.rb": [
         null,
         null,
         1
       ],
-      "/Users/janicedunn/Desktop/swap_project/config/initializers/devise.rb": [
+      "/Users/Guest/Desktop/swap_project_rails/config/initializers/devise.rb": [
         null,
         null,
         1,
@@ -434,13 +434,13 @@
         null,
         null
       ],
-      "/Users/janicedunn/Desktop/swap_project/config/initializers/filter_parameter_logging.rb": [
+      "/Users/Guest/Desktop/swap_project_rails/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/janicedunn/Desktop/swap_project/config/initializers/inflections.rb": [
+      "/Users/Guest/Desktop/swap_project_rails/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -458,18 +458,18 @@
         null,
         null
       ],
-      "/Users/janicedunn/Desktop/swap_project/config/initializers/mime_types.rb": [
+      "/Users/Guest/Desktop/swap_project_rails/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null
       ],
-      "/Users/janicedunn/Desktop/swap_project/config/initializers/session_store.rb": [
+      "/Users/Guest/Desktop/swap_project_rails/config/initializers/session_store.rb": [
         null,
         null,
         1
       ],
-      "/Users/janicedunn/Desktop/swap_project/config/initializers/wrap_parameters.rb": [
+      "/Users/Guest/Desktop/swap_project_rails/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -485,7 +485,7 @@
         null,
         null
       ],
-      "/Users/janicedunn/Desktop/swap_project/config/routes.rb": [
+      "/Users/Guest/Desktop/swap_project_rails/config/routes.rb": [
         1,
         1,
         1,
@@ -495,19 +495,22 @@
         null,
         null
       ],
-      "/Users/janicedunn/Desktop/swap_project/app/models/user.rb": [
+      "/Users/Guest/Desktop/swap_project_rails/app/models/user.rb": [
         1,
         null,
         null,
         1,
         null,
+        null,
+        1,
+        1,
         null,
         1,
         1,
         1,
         null
       ],
-      "/Users/janicedunn/Desktop/swap_project/app/controllers/application_controller.rb": [
+      "/Users/Guest/Desktop/swap_project_rails/app/controllers/application_controller.rb": [
         1,
         null,
         null,
@@ -515,120 +518,137 @@
         null,
         1,
         null,
+        1,
+        null,
+        1,
+        3,
+        2,
+        null,
+        null
+      ],
+      "/Users/Guest/Desktop/swap_project_rails/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/Guest/Desktop/swap_project_rails/app/controllers/listings_controller.rb": [
+        1,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        1,
+        0,
+        null,
+        null
+      ],
+      "/Users/Guest/Desktop/swap_project_rails/app/controllers/users_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        0,
+        null,
+        null
+      ],
+      "/Users/Guest/Desktop/swap_project_rails/app/models/listing.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/Guest/Desktop/swap_project_rails/app/models/neighborhood.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/Guest/Desktop/swap_project_rails/spec/factories.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Guest/Desktop/swap_project_rails/spec/models/listing_spec.rb": [
         1,
         null,
         1,
         2,
         2,
-        null,
+        2,
         null
       ],
-      "/Users/janicedunn/Desktop/swap_project/app/helpers/application_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/janicedunn/Desktop/swap_project/app/controllers/listings_controller.rb": [
-        1,
-        1,
-        0,
-        null,
-        null,
-        1,
-        0,
-        0,
-        null,
-        null,
-        1,
-        0,
-        0,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
-        null,
-        null,
-        null,
-        1,
-        0,
-        0,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
-        null,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
-        null,
-        null,
-        1,
-        1,
-        0,
-        null,
-        null
-      ],
-      "/Users/janicedunn/Desktop/swap_project/app/controllers/users_controller.rb": [
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        0,
-        null,
-        null
-      ],
-      "/Users/janicedunn/Desktop/swap_project/app/models/listing.rb": [
-        1,
-        1,
-        null,
-        1,
-        1,
-        null
-      ],
-      "/Users/janicedunn/Desktop/swap_project/spec/factories.rb": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/janicedunn/Desktop/swap_project/spec/models/listing_spec.rb": [
+      "/Users/Guest/Desktop/swap_project_rails/spec/models/neighborhood_spec.rb": [
         1,
         null,
         1,
         2,
         2,
-        2,
         null
       ],
-      "/Users/janicedunn/Desktop/swap_project/spec/models/user_spec.rb": [
+      "/Users/Guest/Desktop/swap_project_rails/spec/models/user_spec.rb": [
         1,
         null,
         1,
@@ -636,6 +656,6 @@
         null
       ]
     },
-    "timestamp": 1445806012
+    "timestamp": 1445980248
   }
 }
