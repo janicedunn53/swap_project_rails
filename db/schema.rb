@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151028210243) do
+ActiveRecord::Schema.define(version: 20151028211716) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20151028210243) do
     t.string   "listingable_type"
   end
 
-  add_index "listings", ["listingable_type", "listingable_type"], name: "index_listings_on_listingable_type_and_listingable_type", using: :btree
+  add_index "listings", ["listingable_id", "listingable_type"], name: "index_listings_on_listingable_id_and_listingable_type", using: :btree
 
   create_table "neighborhoods", force: :cascade do |t|
     t.string   "name"
