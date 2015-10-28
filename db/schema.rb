@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151027210149) do
+ActiveRecord::Schema.define(version: 20151028211716) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,7 +27,11 @@ ActiveRecord::Schema.define(version: 20151027210149) do
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
+    t.integer  "listingable_id"
+    t.string   "listingable_type"
   end
+
+  add_index "listings", ["listingable_id", "listingable_type"], name: "index_listings_on_listingable_id_and_listingable_type", using: :btree
 
   create_table "neighborhoods", force: :cascade do |t|
     t.string   "name"
