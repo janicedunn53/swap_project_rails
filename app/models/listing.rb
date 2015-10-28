@@ -1,5 +1,5 @@
 class Listing < ActiveRecord::Base
-  belongs_to :user
+  belongs_to :listingable, polymorphic: true
   has_attached_file :photo, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing_photo.png"
 
   validates :name, :presence => true
