@@ -1,6 +1,6 @@
 <%= render 'layouts/errors', :object => @listing %>
 
-<%= form_for [@user, @listing], html: { multipart: true } do |f| %>
+<%= form_for [listingable, Listing.new], html: { multipart: true } do |f| %>
   <div class="form-group">
     <%= f.label :name %>
     <%= f.text_field :name %>
