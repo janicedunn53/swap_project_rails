@@ -1,5 +1,5 @@
 class ListingsController < ApplicationController
-  # before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:index, :show]
 
   def index
     @listings = @listingable.listings
@@ -15,9 +15,9 @@ class ListingsController < ApplicationController
 
   def create
     @listing = @listingable.listings.new(listing_params)
-    # @listing.user = current_user
+    @listing.user = current_user
     if @listing.save
-      flash[:notice] = "You item was successfully saved!"
+      flash[:notice] = "Your item was successfully saved!"
       redirect_to @listingable
     else
       render :new
