@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @listingable = @user
     @listings = @listingable.listings
-    # @listing = Listing.new
+    @listing = Listing.new
   end
 
   private
