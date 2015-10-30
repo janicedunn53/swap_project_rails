@@ -3,11 +3,11 @@
 
 <br>
 
-<%= render partial: "listings/listings" %>
+<%= render partial: "listings/listings", locals: {listingable: @user} %>
 
 <hr>
 <h4>Add an item to swap or share</h4>
-<%= render partial: 'listings/form' %>
+<%= render partial: 'listings/form', locals: {listingable: @user} %>
 
 
 <!-- <p><%= link_to "Add an item to swap or share", new_user_listing_path(@user) %></p> -->

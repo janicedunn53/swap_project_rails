@@ -1,6 +1,5 @@
 class ListingsController < ApplicationController
   # before_action :authenticate_user!
-  before_action :load_listingable
 
   def index
     @listings = @listingable.listings
@@ -19,7 +18,7 @@ class ListingsController < ApplicationController
     # @listing.user = current_user
     if @listing.save
       flash[:notice] = "You item was successfully saved!"
-      redirect_to [@listingable, :listings]
+      redirect_to @listingable
     else
       render :new
     end
@@ -47,11 +46,6 @@ class ListingsController < ApplicationController
   end
 
   private
-    def load_listingable
-      resource, id = request.path.split('/')[1, 2]
-      @listingable = resource.singularize.classify.constantize.find(id)
-    end
-
     def listing_params
       params.require(:listing).permit(:name, :description, :photo)
     end
