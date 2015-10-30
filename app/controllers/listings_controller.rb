@@ -1,24 +1,25 @@
 class ListingsController < ApplicationController
+  # before_action :authenticate_user!
+  before_action :load_listingable
+
   def index
     @listings = @listingable.listings
   end
 
-  def show
-    @user = User.find(params[:user_id])
-    @listing = Listing.find(params[:id])
-  end
+  # def show
+  #   @listing = @listingable.find(params[:id])
+  # end
 
   def new
-    @user = User.find(params[:user_id])
-    @listing = @user.listings.new
+    @listing = @listingable.listings.new
   end
 
   def create
-    @user = User.find(params[:user_id])
-    @listing = @user.listings.new(listing_params)
+    @listing = @listingable.listings.new(listing_params)
+    # @listing.user = current_user
     if @listing.save
-      flash[:notice] = "Item successfully saved!"
-      redirect_to user_path(@listing.user)
+      flash[:notice] = "You item was successfully saved!"
+      redirect_to [@listingable, :listings]
     else
       render :new
     end
@@ -46,7 +47,12 @@ class ListingsController < ApplicationController
   end
 
   private
-  def listing_params
-    params.require(:listing).permit(:name, :description, :photo)
-  end
+    def load_listingable
+      resource, id = request.path.split('/')[1, 2]
+      @listingable = resource.singularize.classify.constantize.find(id)
+    end
+
+    def listing_params
+      params.require(:listing).permit(:name, :description, :photo)
+    end
 end

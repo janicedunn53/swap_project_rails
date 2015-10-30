@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   resources :neighborhoods do
     resources :listings
   end
-  
-  root to: "neighborhoods#index"
+
+  root to: "users#index"
 end

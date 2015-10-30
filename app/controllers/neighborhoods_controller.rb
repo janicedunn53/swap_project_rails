@@ -5,6 +5,9 @@ class NeighborhoodsController < ApplicationController
 
   def show
     @neighborhood = Neighborhood.find(params[:id])
+    @listingable = @neighborhood
+    @listings = @listingable.listings
+    @listing = Listing.new
   end
 
   def new

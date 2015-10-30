@@ -3,7 +3,7 @@
 <ul>
   <% @neighborhoods.each do |neighborhood| %>
     <li><%= link_to neighborhood.name, neighborhood_path(neighborhood) %> - <%= neighborhood.quadrant %><br>
-    <%= link_to "Edit", edit_neighborhood_path(neighborhood) %> |
-    <%= link_to "Delete", neighborhood_path(neighborhood), :data => {:confirm => "Are you sure you want to delete this neighborhood?", :method => "delete"} %></li>
+    <%= link_to "Edit", edit_neighborhood_path(neighborhood), class: "text-warning" %> |
+    <%= link_to "Delete", neighborhood_path(neighborhood), class: "text-danger", :data => {:confirm => "Are you sure you want to delete this neighborhood?", :method => "delete"} %></li>
   <% end %>
 </ul>

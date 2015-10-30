@@ -5,6 +5,9 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @listingable = @user
+    @listings = @listingable.listings
+    @listing = Listing.new
   end
 
   private

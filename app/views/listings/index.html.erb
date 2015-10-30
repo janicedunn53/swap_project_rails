@@ -2,8 +2,8 @@
 
 <ul>
   <% @listings.each do |listing| %>
-    <li><%= link_to listing.name, listing_path(listing) %></li>
+    <li><%= listing.name %></li>
   <% end %>
 </ul>
 
-<%= link_to "Add a new listing", new_listing_path(@listing) %>
+<%= link_to "Add a new listing", [:new, @listingable, :listing] %>
