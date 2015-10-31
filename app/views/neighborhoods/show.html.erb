@@ -1,3 +1,7 @@
 <h1>Items in <%= @neighborhood.name %></h1>
 
-<%= render partial: 'listings/listings' %>
+<%= render partial: 'listings/listings', locals: {listingable: @neighborhood} %>
+
+<hr>
+<h4>Add an item to swap or share</h4>
+<%= render partial: 'listings/form', locals: {listingable: @neighborhood} %>
