@@ -18,7 +18,10 @@ class ListingsController < ApplicationController
     @listing.user = current_user
     if @listing.save
       flash[:notice] = "Your item was successfully saved!"
-      redirect_to @listingable
+      respond_to do |format|
+        format.html { redirect_to @listingable }
+        format.js
+      end
     else
       render :new
     end
