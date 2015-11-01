@@ -3,5 +3,7 @@
 <%= render partial: 'listings/listings', locals: {listingable: @neighborhood} %>
 
 <hr>
-<h4>Add an item to swap or share</h4>
-<%= render partial: 'listings/form', locals: {listingable: @neighborhood} %>
+<!-- <h4>Add an item to swap or share</h4>
+<%= render partial: 'listings/form', locals: {listingable: @neighborhood} %> -->
+
+<h4><%= link_to "Add an item to swap or share", new_neighborhood_listing_path(@neighborhood), id: "new_link", remote: true %></h4>
