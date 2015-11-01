@@ -1,9 +1,9 @@
-<% listingable.listings.each do |listing| %>
-  <ul>
-    <div class="well">
+<ul id="listing_items">
+  <% @listingable.listings.each do |listing| %>
+    <li>
       <h4><%= listing.name %></h4>
       <%= listing.description%>
       <%= image_tag listing.photo %>
-    <div>
-  </ul>
-<% end %>
+    </li>
+  <% end %>
+</ul>
