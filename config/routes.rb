@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   resources :neighborhoods, :only => [:index, :show]
 
-  resources :listings, :only => [:show]
+  resources :listings, :only => [:index, :show]
 
   root to: "neighborhoods#index"
 end
