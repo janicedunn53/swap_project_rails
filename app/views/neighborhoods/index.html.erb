@@ -7,7 +7,9 @@
 <p>Halloween just passed and your little Darth Vader won't be able to wear the same costume next year because he will have outgrown it - not that he would want to anyway! Your neighbor would love to have that costume for his little one and would be willing to exchange something for it - maybe a pair of walkie-talkies. How would you find out about each other? On this website!</p>
 
 <h3>Click on a neighborhood to see what goods you could swap!</h3>
+<h3>Then connect with a neighbor for the exchange!</h3>
 
+<br>
 <ul>
   <% @neighborhoods.each do |neighborhood| %>
     <li><%= link_to neighborhood.name, neighborhood_path(neighborhood) %> - <%= neighborhood.quadrant %>

@@ -5,3 +5,20 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+neighborhood_list = [
+  [ "Sellwood", "SE" ],
+  [ "Woodstock", "SE" ],
+  [ "Concordia", "NE" ],
+  [ "Grant Park", "NE" ],
+  [ "Pearl District", "NW" ],
+  [ "Northwest Heights", "NW" ],
+  [ "Goose Hollow", "SW" ],
+  [ "Hillsdale", "SW"],
+  [ "Kenton", "N" ],
+  [ "Overlook", "N" ]
+]
+
+neighborhood_list.each do |name, quadrant|
+  Neighborhood.create( name: name, quadrant: quadrant )
+end
