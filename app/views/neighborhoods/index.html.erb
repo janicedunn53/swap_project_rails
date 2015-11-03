@@ -1,9 +1,17 @@
-<h1>Portland Neighborhoods</h1>
 
+<h1>~ Swap or Share ~</h1>
+<h2>Find kids' goods in your neighborhood!</h2>
+
+<p>Raising kids is a life-changing adventure. It twists and turns with joy and sorrow, laughter and tears. Its a rewarding and valuable experience. But let's face it, raising kids is also expensive.</p>
+
+<p>Halloween just passed and your little Darth Vader won't be able to wear the same costume next year because he will have outgrown it - not that he would want to anyway! Your neighbor would love to have that costume for his little one and would be willing to exchange something for it - maybe a pair of walkie-talkies. How would you find out about each other? On this website!</p>
+
+<h3>Click on a neighborhood to see what goods you could swap!</h3>
+<h3>Then connect with a neighbor for the exchange!</h3>
+
+<br>
 <ul>
   <% @neighborhoods.each do |neighborhood| %>
-    <li><%= link_to neighborhood.name, neighborhood_path(neighborhood) %> - <%= neighborhood.quadrant %><br>
-    <%= link_to "Edit", edit_neighborhood_path(neighborhood), class: "text-warning" %> |
-    <%= link_to "Delete", neighborhood_path(neighborhood), class: "text-danger", :data => {:confirm => "Are you sure you want to delete this neighborhood?", :method => "delete"} %></li>
+    <li><%= link_to neighborhood.name, neighborhood_path(neighborhood) %> - <%= neighborhood.quadrant %>
   <% end %>
 </ul>

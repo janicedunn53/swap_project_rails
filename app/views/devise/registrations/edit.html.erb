@@ -33,8 +33,8 @@
   </div>
 
   <div class="form-group">
-    <%= f.label :neighborhood %>
-    <%= f.text_field :neighborhood, autofocus: true, class: "form-control" %>
+    <%= f.label "Neighborhood" %>
+    <%= f.collection_select(:neighborhood_id, Neighborhood.all, :id, :name) %>
   </div>
 
   <div class="form-group">
