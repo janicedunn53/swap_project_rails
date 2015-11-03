@@ -2,12 +2,12 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :users do
-    resources :listings, module: :users
+    resources :listings
   end
 
-  resources :neighborhoods do
-    resources :listings, module: :neighborhoods
-  end
+  resources :neighborhoods, :only => [:index, :show]
 
-  root to: "users#index"
+  resources :listings, :only => [:show]
+
+  root to: "neighborhoods#index"
 end

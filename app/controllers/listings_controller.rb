@@ -5,9 +5,9 @@ class ListingsController < ApplicationController
     @listings = @listingable.listings
   end
 
-  # def show
-  #   @listing = @listingable.find(params[:id])
-  # end
+  def show
+    @listing = Listing.find(params[:id])
+  end
 
   def new
     @listing = @listingable.listings.new
