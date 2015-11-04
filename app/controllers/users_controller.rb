@@ -4,10 +4,8 @@ class UsersController < ApplicationController
   end
 
   def show
+    @neighborhood = Neighborhood.find(params[:id])
     @user = User.find(params[:id])
-    @listingable = @user
-    @listings = @listingable.listings
-    @listing = Listing.new
   end
 
   private

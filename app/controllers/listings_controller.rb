@@ -1,25 +1,28 @@
 class ListingsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
-  def index
-    @listings = @listingable.listings
-  end
+  # def index
+  #   @listings = @listingable.listings
+  # end
 
   def show
+    @user = User.find(params[:user_id])
     @listing = Listing.find(params[:id])
   end
 
   def new
-    @listing = @listingable.listings.new
+    @user = User.find(params[:user_id])
+    @listing = @user.listings.new
   end
 
   def create
-    @listing = @listingable.listings.new(listing_params)
-    @listing.user = current_user
+    @user = User.find(params[:user_id])
+    @listing = @user.listings.new(listing_params)
+    # @listing.user = current_user
     if @listing.save
       flash[:notice] = "Your item was successfully saved!"
       respond_to do |format|
-        format.html { redirect_to @listingable }
+        format.html { redirect_to user_path(@listing.user) }
         format.js
       end
     else
