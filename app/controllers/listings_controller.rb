@@ -18,7 +18,7 @@ class ListingsController < ApplicationController
   def create
     @user = User.find(params[:user_id])
     @listing = @user.listings.new(listing_params)
-    @listing.user = current_user
+    # @listing.user = current_user
     if @listing.save
       flash[:notice] = "Your item was successfully saved!"
       respond_to do |format|
