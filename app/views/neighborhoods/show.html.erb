@@ -1,3 +1,7 @@
-<h1>Items in <%= @neighborhood.name %></h1>
+<h1>Neighbors in <%= @neighborhood.name %></h1>
 <br>
-<%= render partial: 'listings/listings', locals: {listingable: @neighborhood} %>
+<ul>
+  <% @neighborhood.users.each do |user| %>
+    <li><%= link_to user.username, neighborhood_user_path(@neighborhood, user) %></li>
+  <% end %>
+</ul>
