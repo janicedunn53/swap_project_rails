@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SwapProject</title>
+  <title>Neighborhood Swap</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -13,7 +13,7 @@
   <div class="container">
     <% if notice %><div class="alert alert-info"><%= notice %></div><% end %>
     <% if alert %><div class="alert alert-warning"><%= alert %></div><% end %>
-  
+
     <%= yield %>
   </div>
 
