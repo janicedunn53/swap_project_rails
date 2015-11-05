@@ -1,24 +1,31 @@
 <h1><%= @user.username %>'s Items</h1>
-<%= image_tag @user.avatar.url(:thumb) %>
+
 
 <br>
 
+<div class="row">
 <% if @user.listings.any? %>
+
   <ul>
     <% @user.listings.each do |listing| %>
-      <li><b><%= link_to listing.name, user_listing_path(@user, listing) %></b>
-             <%= image_tag listing.photo %>
+      <div class="col-sm-4">
+
+      <li><%= image_tag listing.photo %></li>
+      <li><b><%= link_to listing.name, user_listing_path(@user, listing) %></b></li>
+
 
       <% if current_user == @user %>
         <%= link_to "Edit", edit_user_listing_path(@user, listing) %> |
         <%= link_to "Delete", user_listing_path(@user, listing), :data => {:confirm => "Are you sure you want to delete this listing?", :method => "delete"} %>
       <% end %>
 
+      </div>
     <% end %>
   </ul>
 <% else %>
   <p>Currently, there are no items available to swap.</p>
 <% end %>
+</div>
 
 <hr>
 <% if current_user == @user %>

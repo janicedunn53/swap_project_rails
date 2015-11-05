@@ -16,3 +16,16 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url(https://fonts.googleapis.com/css?family=Rancho|Lato:400,400italic,700,700italic);
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+h1 {
+font-family: 'Rancho', cursive;
+}
+
+li {
+  list-style-type: none;
+}
