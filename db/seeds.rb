@@ -7,18 +7,18 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 neighborhood_list = [
-  [ "Sellwood", "SE" ],
-  [ "Woodstock", "SE" ],
-  [ "Concordia", "NE" ],
-  [ "Grant Park", "NE" ],
-  [ "Pearl District", "NW" ],
-  [ "Northwest Heights", "NW" ],
-  [ "Goose Hollow", "SW" ],
-  [ "Hillsdale", "SW"],
-  [ "Kenton", "N" ],
-  [ "Overlook", "N" ]
+  [ "Sellwood", "SE", "Sellwood, Portland, OR" ],
+  [ "Woodstock", "SE", "Woodstock, Portland, OR" ],
+  [ "Concordia", "NE", "Concordia, Portland, OR" ],
+  [ "Grant Park", "NE", "Grant Park, Portland, OR" ],
+  [ "Pearl District", "NW", "Pearl District, Portland, OR" ],
+  [ "Northwest Heights", "NW", "Northwest Heights, Portland, OR" ],
+  [ "Goose Hollow", "SW", "Goose Hollow, Portland, OR" ],
+  [ "Hillsdale", "SW", "Hillsdale, Portland, OR" ],
+  [ "Kenton", "N", "Kenton, Portland, OR" ],
+  [ "Overlook", "N", "Overlook, Portland, OR" ]
 ]
 
-neighborhood_list.each do |name, quadrant|
-  Neighborhood.create( name: name, quadrant: quadrant )
+neighborhood_list.each do |name, quadrant, address|
+  Neighborhood.create( name: name, quadrant: quadrant, address: address )
 end

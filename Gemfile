@@ -10,6 +10,7 @@ gem 'turbolinks'
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'paperclip'
+gem 'geocoder'
 
 group :development do
   gem 'byebug'

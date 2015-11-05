@@ -5,3 +5,9 @@
     <li><%= image_tag user.avatar.url(:thumb) %>  <%= link_to user.username, neighborhood_user_path(@neighborhood, user) %></li>
   <% end %>
 </ul>
+
+<br>
+<h3>Location of this neighborhood</h3>
+
+<p><%= @neighborhood.name %> in <%= @neighborhood.quadrant %> Portland</p>
+<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=14&markers=#{@neighborhood.latitude}%2C#{@neighborhood.longitude}" %>
