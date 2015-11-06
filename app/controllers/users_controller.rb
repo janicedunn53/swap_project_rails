@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @neighborhood = Neighborhood.find(params[:id])
+    @neighborhood = Neighborhood.find(params[:neighborhood_id])
     @user = User.find(params[:id])
   end
 

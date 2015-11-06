@@ -29,5 +29,5 @@
 
 <hr>
 <% if current_user == @user %>
-  <h4><%= link_to "Add an item to swap or share", new_user_listing_path(@user) %></h4>
+  <h4><%= link_to "Add an item to swap or share", new_user_listing_path(@user, @listing) %></h4>
 <% end %>

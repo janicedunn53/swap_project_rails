@@ -22,7 +22,7 @@ class ListingsController < ApplicationController
     if @listing.save
       flash[:notice] = "Your item was successfully saved!"
       respond_to do |format|
-        format.html { redirect_to user_path(@listing.user) }
+        format.html { redirect_to neighborhood_user_path(@user.neighborhood_id, @user) }
         format.js
       end
     else
@@ -39,16 +39,19 @@ class ListingsController < ApplicationController
     @user = User.find(params[:user_id])
     @listing = @user.listings.find(params[:id])
     if @listing.update(listing_params)
-      redirect_to user_path(@user)
+      redirect_to neighborhood_user_path(@user.neighborhood_id, @user)
     else
       render :edit
     end
   end
 
   def destroy
+    @user = User.find(params[:user_id])
     @listing = Listing.find(params[:id])
     @listing.destroy
-      redirect_to user_path(params[:user_id])
+      # redirect_to user_path(params[:user_id])
+      redirect_to neighborhood_user_path(@user.neighborhood_id, @user)
+      # redirect_to root_path
   end
 
   private
