@@ -18,6 +18,7 @@ group :development do
   gem 'spring'
   gem 'quiet_assets'
   gem 'better_errors'
+  gem 'letter_opener'
 end
 
 group :test, :development do
