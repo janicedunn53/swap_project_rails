@@ -1,9 +1,15 @@
 class ListingsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
-  # def index
-  #   @listings = @listingable.listings
-  # end
+  def index
+    if params[:query]
+      @search = Listing.basic_search(params[:query])
+      results = @search.first
+      redirect_to user_listing_path(results.user, results)
+    else
+      @search = []
+    end
+  end
 
   def show
     @user = User.find(params[:user_id])
