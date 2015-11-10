@@ -6,9 +6,11 @@ Rails.application.routes.draw do
     resources :users, :only => [:index, :show]
   end
 
-  resources :users, :only => [:index, :show] do
-    resources :listings
+  resources :users, :only => [] do
+    resources :listings, :except => [:index]
   end
+
+  resources :listings, :only => [:index]
 
   root to: "neighborhoods#index"
 end

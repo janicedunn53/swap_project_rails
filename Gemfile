@@ -11,6 +11,7 @@ gem 'bootstrap-sass'
 gem 'devise'
 gem 'paperclip'
 gem 'geocoder'
+gem 'textacular'
 
 group :development do
   gem 'byebug'
