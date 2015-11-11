@@ -55,9 +55,7 @@ class ListingsController < ApplicationController
     @user = User.find(params[:user_id])
     @listing = Listing.find(params[:id])
     @listing.destroy
-      # redirect_to user_path(params[:user_id])
       redirect_to neighborhood_user_path(@user.neighborhood_id, @user)
-      # redirect_to root_path
   end
 
   private
