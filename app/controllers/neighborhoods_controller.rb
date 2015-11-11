@@ -1,6 +1,11 @@
 class NeighborhoodsController < ApplicationController
   def index
     @neighborhoods = Neighborhood.all
+    @user1 = User.find(1)
+    @user2 = User.find(2)
+    @listing2 = Listing.find(2)
+    @listing3 = Listing.find(3)
+    @listing4 = Listing.find(4)
   end
 
   def show
