@@ -30,8 +30,7 @@
 </div>
 
 <br>
-<h4>Like any of these items? Connect with <%= @user.username %> to start a conversation.</h4>
-(Add a link to form? Use an API? Or letter_opener?)
+<h4>Like any of these items? Connect with <strong><%= mail_to @user.email, @user.username, subject: "Interested in an Item on Neighborhood Swap and Share", body: "" %></strong> to start a conversation.</h4>
 
 <hr>
 <% if current_user == @user %>

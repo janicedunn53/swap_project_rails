@@ -2,4 +2,4 @@
 <p><%= @listing.description %></p>
 <%= image_tag @listing.photo %>
 
-<p>Contact <%= @user.username %> if you want to swap for this item.<p>
+<p>Contact <strong><%= mail_to @user.email, @user.username, subject: "Interested in an Item on Neighborhood Swap and Share", body: "" %></strong> if you want to swap for this item.<p>
