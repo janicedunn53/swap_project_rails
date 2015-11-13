@@ -30,7 +30,7 @@
         </li> -->
       </ul>
       <li><%= form_tag listings_path, method: 'get', class: "navbar-form navbar-left", role: "search" do %>
-        <%= text_field_tag :query, params[:query], size: 25, placeholder: "Search for a Listing", class: "form-control"%>
+        <%= text_field_tag :query, params[:query], size: 25, placeholder: "Search for an Item", class: "form-control"%>
         <%= submit_tag 'Search', class: 'btn btn-default' %>
         <% end %></li>
       <!-- <form class="navbar-form navbar-left" role="search">
