@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users
+  get 'static/about'
 
+  devise_for :users
 
   resources :neighborhoods, :only => [:index, :show] do
     resources :users, :only => [:index, :show]
