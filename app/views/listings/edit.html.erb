@@ -10,6 +10,11 @@
   </div>
 
   <div class="form-group">
+    <%= f.label :exchange_type, "What type of exchange?" %>
+    <%= f.select(:exchange_type, ["Swap", "Share", "Gift"]) %>
+  </div>
+
+  <div class="form-group">
     <%= f.label :photo %>
     <%= f.file_field :photo, class: "form-control" %>
   </div>
