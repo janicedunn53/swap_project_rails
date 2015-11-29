@@ -18,8 +18,17 @@
 @import "bootstrap";
 @import url(https://fonts.googleapis.com/css?family=Rancho|Lato:400,400italic,700,700italic);
 
+nav.navbar.navbar-default {
+  background-color: rgba(255, 255, 255, 0.6);
+  border: none;
+  border-radius: 0;
+}
+
 body {
   font-family: 'Lato', sans-serif;
+  text-align: center;
+  background: image-url('green_circles.jpg');
+  background-size: cover;
 }
 
 h1 {
@@ -30,6 +39,14 @@ li {
   list-style-type: none;
 }
 
+div.homepage {
+  text-align: center;
+}
+
+div.homepage li {
+  font-size: 1.5em;
+}
+
 #listing_items img {
   width: 250px;
   height: 250px;
@@ -37,4 +54,14 @@ li {
 
 .carousel-inner {
   width: 80%;
+}
+
+div.transbox {
+  padding: 2%;
+  margin: 50px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  border-radius: 25px;
+  opacity:0.8;
+  text-align: center;
 }
