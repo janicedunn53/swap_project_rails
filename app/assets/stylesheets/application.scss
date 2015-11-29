@@ -39,6 +39,10 @@ li {
   list-style-type: none;
 }
 
+a {
+  color: #3cb371;
+}
+
 div.homepage {
   text-align: center;
 }
@@ -52,13 +56,34 @@ div.homepage li {
   height: 250px;
 }
 
-.carousel-inner {
-  width: 80%;
+div.item.active img {
+  border-radius: 10px;
+  width: 275px;
+  height: 275px;
+}
+
+div.item img {
+  border-radius: 10px;
+  width: 275px;
+  height: 275px;
+}
+
+div.carousel-caption {
+  color: #636363;
+}
+
+div.caption-box {
+  padding: 0;
+  margin: 0 50px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  opacity:0.8;
+  text-align: center;
 }
 
 div.transbox {
-  padding: 2%;
-  margin: 50px;
+  padding: 1%;
+  margin: 2% 10%;
   background-color: #ffffff;
   border: 1px solid black;
   border-radius: 25px;
