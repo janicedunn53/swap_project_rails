@@ -47,13 +47,57 @@ div.homepage {
   text-align: center;
 }
 
-div.homepage li {
+div.homepage h1 {
+  font-size: 4em;
+}
+
+div.homepage h3 {
+  font-weight: bold;
+}
+
+div.homepage ul {
   font-size: 1.5em;
 }
 
-#listing_items img {
+div.homepage li {
+  font-style: italic;
+}
+
+#listing-items img,
+#show-item img {
   width: 250px;
   height: 250px;
+  border-radius: 10px;
+}
+
+#listing-items a {
+  color: #00749A;
+  font-size: 1.25em;
+}
+
+#show-neighborhood img {
+  border-radius: 10px;
+}
+
+#show-neighborhood a {
+  color: #CD0066;
+  font-size: 1.25em;
+}
+
+#show-user h4 {
+  font-size: 1.5em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+#show-user a,
+#show-item a {
+  color: #CD0066;
+}
+
+#show-item p {
+  margin: 1% 20%;
+  font-size: 1.15em;
 }
 
 div.item.active img {
@@ -89,4 +133,21 @@ div.transbox {
   border-radius: 25px;
   opacity:0.8;
   text-align: center;
+}
+
+#about {
+  text-align: left;
+  font-size: 1.25em;
+}
+
+#about h1{
+  text-align: center;
+}
+
+div.devise-forms a {
+  color: #CD0066;
+}
+
+form#new_user {
+  margin: 0 20%;
 }

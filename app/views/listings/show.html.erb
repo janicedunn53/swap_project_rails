@@ -1,7 +1,10 @@
+<div id="show-item">
 <h1><%= @listing.name %></h1>
 <p><%= @listing.description %></p>
 <p>I would like to <strong><%= @listing.exchange_type %></strong> this item.</p>
-<%= image_tag @listing.photo %>
+  <%= image_tag @listing.photo %>
 
 <br>
+
 <h4>Contact <strong><%= mail_to @user.email, @user.username, subject: "Interested in #{@listing.name} on Neighborhood Swap and Share", body: "" %></strong> if you want to swap for this item.</h4>
+</div>
