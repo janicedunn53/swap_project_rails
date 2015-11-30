@@ -1,68 +1,79 @@
+<div class="homepage">
+  <h1>~ Neighborhood Swap and Share ~</h1>
+  <h3>Find kids' goods in your neighborhood!</h3>
+  <ul>
+    <li><strong>Swap</strong> an item for something else,</li>
+    <li><strong>Share</strong> an item with a neighbor, or</li>
+    <li><strong>Gift</strong> an item if you so choose.</li>
+  </ul>
+  <br>
 
-<h1>~ Neighborhood Swap and Share ~</h1>
-<h3>Find kids' goods in your neighborhood!</h3>
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
 
-
-
-<h4>As a "seller," you can post an item to swap for something else, share your item with another user, or gift it if you so choose.</h4>
-<br>
-
-<div class="row">
-  <div class="col-md-2"></div>
-  <div class="col-md-8">
-    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-      </ol>
-
-      <!-- Wrapper for slides -->
-      <center>
-        <div class="carousel-inner" role="listbox">
-          <div class="item active">
-            <%= link_to image_tag("Carousel Stroller.jpeg"), user_listing_path(@user10, @listing52) %>
-            <div class="carousel-caption">
-              <h4>UppaBaby Vista Stroller</h4>
+        <!-- Wrapper for slides -->
+        <center>
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <%= link_to image_tag("beige_stroller.jpg"), user_listing_path(@user10, @listing52) %>
+              <div class="carousel-caption">
+                <div class="caption-box">
+                  <h4>UppaBaby Vista Stroller</h4>
+                  <h5>Sellwood</h5>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <%= link_to image_tag("multi_teepee.jpg"), user_listing_path(@user10, @listing61) %>
+              <div class="carousel-caption">
+                <div class="caption-box">
+                  <h4>Land of Nod Teepee</h4>
+                  <h5>Sellwood</h5>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <%= link_to image_tag("blue_scooter.jpg"), user_listing_path(@user11, @listing59) %>
+              <div class="carousel-caption">
+                <div class="caption-box">
+                  <h4>Micro Mini Scooter</h4>
+                  <h5>Grant Park</h5>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="item">
-            <%= link_to image_tag("Carousel Teepee.jpeg"), user_listing_path(@user10, @listing61) %>
-            <div class="carousel-caption">
-              <h4>Land of Nod Teepee</h4>
-            </div>
-          </div>
-          <div class="item">
-            <%= link_to image_tag("Carousel Scooter.jpeg"), user_listing_path(@user11, @listing59) %>
-            <div class="carousel-caption">
-              <h4>Micro Mini Scooter</h4>
-            </div>
-          </div>
-          ...
-        </div>
-      <center>
-      <!-- Controls -->
-      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
+        <center>
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
     </div>
+    <div class="col-md-3"></div>
   </div>
-  <div class="col-md-2"></div>
+
+  <div class="transbox">
+    <h4>Click on a neighborhood to see who is there and what goods you could swap for, share, or receive as a gift.</h4>
+    <h4>Then connect with a neighbor for the exchange!</h4>
+
+    <br>
+    <ul>
+      <% @neighborhoods.each do |neighborhood| %>
+        <li><%= link_to neighborhood.name, neighborhood_path(neighborhood) %> - <%= neighborhood.quadrant %>
+      <% end %>
+    </ul>
+  </div>
 </div>
-
-<br>
-<h3>Click on a neighborhood to see what goods you could swap for, share, or receive as a gift.</h3>
-<h3>Then connect with a neighbor for the exchange!</h3>
-
-<br>
-<ul>
-  <% @neighborhoods.each do |neighborhood| %>
-    <li><%= link_to neighborhood.name, neighborhood_path(neighborhood) %> - <%= neighborhood.quadrant %>
-  <% end %>
-</ul>
