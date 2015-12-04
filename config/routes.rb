@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to: "neighborhoods#index"
   get '/about', to: 'static#about'
 
   devise_for :users
@@ -13,5 +14,4 @@ Rails.application.routes.draw do
 
   resources :listings, :only => [:index]
 
-  root to: "neighborhoods#index"
 end
