@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root to: "neighborhoods#index"
-  get '/about', to: 'static#about'
+  # get '/about', to: 'static#about'
 
   devise_for :users
 
