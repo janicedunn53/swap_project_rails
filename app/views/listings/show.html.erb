@@ -1,7 +1,7 @@
 <div id="show-item">
 <h1><%= @listing.name %></h1>
 <p><%= @listing.description %></p>
-<p>I would like to <strong><%= @listing.exchange_type %></strong> this item.</p>
+<p>I would like to <span class="exchange"><%= @listing.exchange_type %></span> this item.</p>
   <%= image_tag @listing.photo %>
 
 <br>

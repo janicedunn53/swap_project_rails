@@ -4,8 +4,13 @@ class ListingsController < ApplicationController
   def index
     if params[:query]
       @search = Listing.basic_search(params[:query])
-      results = @search.first
-      redirect_to user_listing_path(results.user, results)
+      result = @search.first
+      if result
+        redirect_to user_listing_path(result.user, result)
+      else
+        redirect_to root_path
+        flash[:alert] = "No items matched your search."
+      end
     else
       @search = []
     end
