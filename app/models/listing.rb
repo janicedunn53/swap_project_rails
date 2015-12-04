@@ -4,5 +4,6 @@ class Listing < ActiveRecord::Base
 
   validates :name, :presence => true
   validates :description, :presence => true
+  validates :exchange_type, :presence => true
   validates_attachment_content_type :photo, :content_type => /\Aimage\/.*\Z/
 end

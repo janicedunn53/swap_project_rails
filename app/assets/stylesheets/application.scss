@@ -18,7 +18,7 @@
 @import "bootstrap";
 @import url(https://fonts.googleapis.com/css?family=Rancho|Lato:400,400italic,700,700italic);
 
-nav.navbar.navbar-default {
+.navbar.navbar-default {
   background-color: rgba(255, 255, 255, 0.6);
   border: none;
   border-radius: 0;
@@ -43,26 +43,25 @@ a {
   color: #3cb371;
 }
 
-div.homepage {
+.homepage {
   text-align: center;
 }
 
-div.homepage h1 {
+.homepage h1 {
   font-size: 4em;
 }
 
-div.homepage h3 {
+.homepage h3 {
   font-weight: bold;
 }
 
-div.homepage ul {
+.homepage ul {
   font-size: 1.5em;
 }
 
-div.homepage li {
+.homepage li {
   font-family: 'Rancho', cursive;
   font-size: 1.25em;
-  // font-style: italic;
 }
 
 #listing-items img,
@@ -108,23 +107,23 @@ div.homepage li {
   font-style: italic;
 }
 
-div.item.active img {
+.item.active img {
   border-radius: 10px;
   width: 275px;
   height: 275px;
 }
 
-div.item img {
+.item img {
   border-radius: 10px;
   width: 275px;
   height: 275px;
 }
 
-div.carousel-caption {
+.carousel-caption {
   color: #636363;
 }
 
-div.caption-box {
+.caption-box {
   padding: 0;
   margin: 0 50px;
   background-color: #ffffff;
@@ -133,7 +132,7 @@ div.caption-box {
   text-align: center;
 }
 
-div.transbox {
+.transbox {
   padding: 1%;
   margin: 2% 10%;
   background-color: #ffffff;
@@ -152,10 +151,13 @@ div.transbox {
   text-align: center;
 }
 
-div.devise-forms a {
+.devise-forms a {
   color: #CD0066;
 }
 
-form#new_user {
+#new_user,
+#edit_user,
+#new_listing,
+.edit_listing {
   margin: 0 20%;
 }

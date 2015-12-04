@@ -3,7 +3,7 @@ FactoryGirl.define do
     username("pdxhipster")
     email("pdxhipster@pdx.com")
     password("password")
-    neighborhood("Buckman")
+    neighborhood_id(1)
   end
 
   factory(:listing) do
