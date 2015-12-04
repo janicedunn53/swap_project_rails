@@ -60,7 +60,9 @@ div.homepage ul {
 }
 
 div.homepage li {
-  font-style: italic;
+  font-family: 'Rancho', cursive;
+  font-size: 1.25em;
+  // font-style: italic;
 }
 
 #listing-items img,
@@ -98,6 +100,12 @@ div.homepage li {
 #show-item p {
   margin: 1% 20%;
   font-size: 1.15em;
+}
+
+.exchange {
+  font-size: 1.15em;
+  font-weight: bold;
+  font-style: italic;
 }
 
 div.item.active img {
