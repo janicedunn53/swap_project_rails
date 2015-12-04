@@ -12,6 +12,7 @@ gem 'devise'
 gem 'paperclip'
 gem 'geocoder'
 gem 'textacular'
+ruby '2.2.0'
 
 group :development do
   gem 'byebug'
